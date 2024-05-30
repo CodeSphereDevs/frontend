@@ -1,20 +1,54 @@
 .nav {
-    background-color: #18181b;
+    /* border-bottom: 1px solid #334155; */
     color: whitesmoke;
-    padding: 12px 5%;
+    padding: 8px 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 ul{
     display: flex;
-    justify-content: flex-end;
     gap: 12px;
     list-style: none;
 }
 
-
-
 a {
-    color: white;
+    color: #f1f5f9;
     text-decoration: none;
     text-transform: uppercase;
+    font-weight: 500;
+}
+
+a:hover{
+    color: #94a3b8 ;
+}
+
+.active {
+    color: #64748b !important;
+}
+
+.ingresar-button {
+    background-color: #be185d;
+    color: white;
+    padding: 3px 8px;
+    border-radius: 5px;
+}
+
+.ingresar-button:hover {
+    color: white;
+    background-color: #9d174d;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+}
+
+img {
+    height: 40px;
+    background-color: white;
+    padding: 1px;
+    border-radius: 50%;
+    margin-right: 8px;
 }
