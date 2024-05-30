@@ -10,6 +10,8 @@ function App() {
       <p className="texto">
         Hola como va?
       </p>
+      <p>prueba</p>
+      <p>prueba</p>
     </div></>
   )
 }
