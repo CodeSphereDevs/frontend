@@ -11,7 +11,7 @@ form {
     display: flex;
     flex-direction: column;
     gap: 16px;
-    border: 1px solid #52525b;
+    /* border: 1px solid #52525b; */
     padding: 20px;
 }
 
@@ -26,8 +26,8 @@ label {
 }
 
 input{
-    padding: 6px;
-    background-color: #52525b;
+    padding: 8px;
+    background-color: #18181b;
     border: none;
     color: #e2e8f0;
     font-size: 1.1rem;
@@ -39,27 +39,26 @@ input:focus{
 
 .submitButton {
     border: none;
-    background-color: #facc15;
+    background-color: #047857;
     border-radius: 5px;
     padding: 8px ;
-    font-weight: 600;
     cursor: pointer;
-    color: black;
+    color: white;
     text-transform: uppercase;
 }
 
 .submitButton:hover{
-    background-color: #fde68a;
+    background-color: #10b981;
 }
 
 .createAccountButton {
     font-size: 0.9rem;
     border: none;
-    color: #facc15;
+    color: #34d399;
 }
 
 .createAccountButton:hover{
-    color: #fde68a;
+    color: #a7f3d0;
 }
 
 span{

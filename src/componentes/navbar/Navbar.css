@@ -1,10 +1,11 @@
 .nav {
-    border-bottom: 1px solid #52525b;
+    border-bottom: 1px solid #333333;
     color: whitesmoke;
     padding: 10px 5%;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    position:relative;
 }
 
 ul{
@@ -14,11 +15,12 @@ ul{
     align-items: center;
 }
 
-a {
+nav ul li a  {
     color: #f1f5f9;
     text-decoration: none;
     text-transform: uppercase;
     font-weight: 500;
+    font-size: 0.9rem;
 }
 
 a:hover{
@@ -31,17 +33,16 @@ a:hover{
 }
 
 .ingresar-button {
-    background-color: #facc15;
-    color: black;
+    background-color: #047857;
+    color: white;
     padding: 3px 12px;
     border-radius: 5px;
-    font-weight: 700;
-    font-size: 1.2rem;
+    font-size: 1rem;
 }
 
 .ingresar-button:hover {
-    color: black;
-    background-color: #fde68a;
+    background-color: #22c55e;
+    color: white;
 }
 
 .logo-container {
@@ -58,7 +59,7 @@ a:hover{
     color: white;
 }
 
-img {
+nav img {
     height: 40px;
     background-color: white;
     padding: 1px;
@@ -67,4 +68,47 @@ img {
     transition: all 0.2s ease-in-out;
 }
 
+.userButton {
+    background:none;
+    border: none;
+    color: #10b981;
+    font-size: 1rem;
+    cursor: pointer;
+    font-weight: 600;
+}
 
+.userButton:hover{
+    color: #23db9e;
+}
+
+.userMenu {
+    position: absolute;
+    right: 5%;
+    top: 60px;
+    display: flex;
+    gap: 8px;
+    flex-direction: column;
+    border: 1px solid rgb(48, 48, 48);
+    padding: 16px;
+}
+
+.userMenu button, a {
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    background: none;
+    text-decoration: none;
+    border: none;
+    color: rgb(233, 233, 233);
+    display: inline-block;
+    padding: 0;
+    text-align: left;
+    cursor: pointer;
+}
+
+.userMenu button {
+    color: rgb(145, 145, 145);
+}
+
+.userMenu  button:hover,a:hover {
+    color: rgb(182, 182, 182);
+}

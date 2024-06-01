@@ -5,9 +5,11 @@ import "./LoginPage.css";
 import ErrorAlert from "../../componentes/ErrorAlert";
 import { login } from "../../api/login";
 import { Link } from "react-router-dom";
+import Loader from "../../assets/loader.svg";
 
 export default function LoginPage() {
   const [errorAlert, setErrorAlert] = useState("");
+  const [isLoading, setIsLoading] = useState(false);
   const { setUser } = useUserContext();
   const nav = useNavigate();
 
@@ -27,20 +29,20 @@ export default function LoginPage() {
 
     if (!/^[a-zA-Z0-9]{3,30}$/.test(username)) {
       showErrorAlert(
-        "El nobre de usuario debe contener entre 3 y 30 caracteres alfanuméricos"
+        "El nombre de usuario debe contener entre 3 y 30 caracteres alfanuméricos"
       );
       return;
     }
 
-    if (!/^(?=.*[a-z])(?=.*[A-Z])(?=.*d).{8,30}$/.test(password)) {
+    if (!/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d).{8,30}$/.test(password)) {
       showErrorAlert(
         "La contraseña debe contener entre 8 y 30 caracteres alfanuméricos, con al menos una mayúsculas y un número"
       );
       return;
     }
-
+    setIsLoading(true);
     const response = await login(username, password);
-    console.log(response);
+    setIsLoading(false);
     if (!response.success) {
       showErrorAlert(response.message);
       return;
@@ -52,22 +54,33 @@ export default function LoginPage() {
 
   return (
     <div className="loginPage">
-      <form onSubmit={handleSubmit}>
-        <div>
-          <label htmlFor="username">Nombre de usuario:</label>
-          <input
-            type="text"
-            name="username"
-            id="username"
-            placeholder="nombre de usuario..."
-            autoComplete="off"
-          />
-        </div>
-        <div>
-          <label htmlFor="password">Contraseña:</label>
-          <input type="password" name="password" placeholder="contraseña..." />
-        </div>
-        <input type="submit" value="Ingresar" className="submitButton" />
+      <form onSubmit={handleSubmit} style={{ height: 230 }}>
+        {isLoading ? (
+          <img src={Loader} alt="loader" />
+        ) : (
+          <>
+            {" "}
+            <div>
+              <label htmlFor="username">Nombre de usuario:</label>
+              <input
+                type="text"
+                name="username"
+                id="username"
+                placeholder="nombre de usuario..."
+                autoComplete="off"
+              />
+            </div>
+            <div>
+              <label htmlFor="password">Contraseña:</label>
+              <input
+                type="password"
+                name="password"
+                placeholder="contraseña..."
+              />
+            </div>
+            <input type="submit" value="Ingresar" className="submitButton" />
+          </>
+        )}
       </form>
       <span>No tienes una cuenta?</span>
       <Link className="createAccountButton" to="/registro">
