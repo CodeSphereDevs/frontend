@@ -6,13 +6,12 @@
 }
 
 body {
-    background-color: #0f172a;
+    background-color: #27272a;
     color:#cbd5e1;
 }
 
 main {
     max-width: 1064px;
     margin: auto;
-    /* border: 1px solid #334155; */
     padding: 16px;
 }

@@ -1,7 +1,7 @@
 .nav {
-    /* border-bottom: 1px solid #334155; */
+    border-bottom: 1px solid #52525b;
     color: whitesmoke;
-    padding: 8px 5%;
+    padding: 10px 5%;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -11,6 +11,7 @@ ul{
     display: flex;
     gap: 12px;
     list-style: none;
+    align-items: center;
 }
 
 a {
@@ -26,23 +27,35 @@ a:hover{
 
 .active {
     color: #64748b !important;
+    cursor:default;
 }
 
 .ingresar-button {
-    background-color: #be185d;
-    color: white;
-    padding: 3px 8px;
+    background-color: #facc15;
+    color: black;
+    padding: 3px 12px;
     border-radius: 5px;
+    font-weight: 700;
+    font-size: 1.2rem;
 }
 
 .ingresar-button:hover {
-    color: white;
-    background-color: #9d174d;
+    color: black;
+    background-color: #fde68a;
 }
 
 .logo-container {
     display: flex;
     align-items: center;
+    cursor: pointer;
+}
+
+.logo-container:hover img {
+    transform: rotate(90deg);
+}
+
+.logo-container:hover span{
+    color: white;
 }
 
 img {
@@ -51,4 +64,7 @@ img {
     padding: 1px;
     border-radius: 50%;
     margin-right: 8px;
+    transition: all 0.2s ease-in-out;
 }
+
+

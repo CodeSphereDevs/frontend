@@ -1,0 +1,67 @@
+.loginPage {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    min-height: calc(100vh - 122px);
+    gap: 6px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    border: 1px solid #52525b;
+    padding: 20px;
+}
+
+form > div {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    font-size: 0.9rem;
+    color: #d4d4d4;
+}
+
+input{
+    padding: 6px;
+    background-color: #52525b;
+    border: none;
+    color: #e2e8f0;
+    font-size: 1.1rem;
+}
+
+input:focus{
+    outline: none;
+}
+
+.submitButton {
+    border: none;
+    background-color: #facc15;
+    border-radius: 5px;
+    padding: 8px ;
+    font-weight: 600;
+    cursor: pointer;
+    color: black;
+    text-transform: uppercase;
+}
+
+.submitButton:hover{
+    background-color: #fde68a;
+}
+
+.createAccountButton {
+    font-size: 0.9rem;
+    border: none;
+    color: #facc15;
+}
+
+.createAccountButton:hover{
+    color: #fde68a;
+}
+
+span{
+    font-size: 0.9rem;
+}

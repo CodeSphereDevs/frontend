@@ -1,0 +1,8 @@
+.alertMessage {
+    color: white;
+    background-color: rgb(124, 31, 8);
+    font-weight: 500;
+    padding: 12px;
+    position: absolute;
+    border-radius: 4px;
+}
