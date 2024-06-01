@@ -1,0 +1,80 @@
+.pageIsLoading {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: calc(100vh - 160px);
+}
+
+.userpage {
+    display: grid;
+    grid-template-areas: 
+    "info info links"
+    "info info posts"
+    "i i p"
+    ;
+    gap: 16px;
+}
+
+.infoSection {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    align-items: center;
+    /* border: 1px solid darkgray; */
+    padding: 20px;
+    position: relative;
+    grid-area: info;
+}
+
+.username {
+    color: #f4f4f5;
+    font-size: x-large;
+}
+
+.title {
+    color: #d4d4d8;
+    font-size: larger;
+}
+
+.details {
+    white-space: pre-line;
+    color: #71717a;
+    margin-top: 4vh;
+    width: 80%;
+}
+
+.editButton{
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    background: none;
+    border: none;
+    color: #34d399;
+    stroke: #34d399;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    
+}
+
+.editButton span{
+    font-size: 0.8rem;
+}
+
+.editButton:hover{
+    color: #7df3c4;
+    stroke: #7df3c4;
+}
+
+.avatar {
+    border-radius: 50%;
+    height: 250px;
+}
+
+.links {
+    grid-area: links;
+    min-width: 250px;
+    border: 1px solid gray;
+    padding: 16px;
+}
