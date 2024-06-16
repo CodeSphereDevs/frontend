@@ -1,22 +1,22 @@
-import "./userCard.scss"
+import "./userCard.scss";
+import { Link } from "react-router-dom";
+import NoAvatar from "../../assets/noavatar.svg";
 
-const UserCard = () => {
+const UserCard = ({ user }) => {
   return (
     <article className="userCard">
-                <img 
-                    className="userCard_img"
-                    src="https://www.w3schools.com/w3images/avatar1.png"
-                    width={150}
-                    alt="userimg"
-                />
-        <h1 className="userCard_name">UserName</h1>
-        <aside className="userCard_info_container">
-            <p className="userCard_info">FullStack</p>
-            <p className="userCard_info">Typescript</p>
-        </aside>
-        <button className="userCard_button">Ver Perfil</button>
+      {user.urlAvatar != null ? (
+        <img src={user.urlAvatar} className="userCard_img" />
+      ) : (
+        <img src={NoAvatar} alt="no avatar image" className="userCard_img" />
+      )}
+      <h1 className="userCard_name">{user.username}</h1>
+        <p className="userCard_info">{user.title}</p>
+      <Link to={`/usuarios/${user.username}`} className="userCard_button">
+        Ver Perfil
+      </Link>
     </article>
-  )
-}
+  );
+};
 
-export default UserCard
+export default UserCard;

@@ -49,16 +49,17 @@ input:focus{
 
 .submitButton {
     border: none;
-    background-color: $emerald500;
+    background-color: $emerald400;
     border-radius: 5px;
     padding: 8px ;
     cursor: pointer;
     color: $stone950;
     text-transform: uppercase;
+    font-weight: 600;
 }
 
 .submitButton:hover{
-    background-color: $emerald600;
+    background-color: $emerald300;
 }
 
 .createAccountButton {
