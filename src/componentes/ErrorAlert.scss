@@ -1,6 +1,8 @@
+@import "../sass/_sassConfing.scss";
+
 .alertMessage {
-    color: white;
-    background-color: rgb(124, 31, 8);
+    color: $stone50;
+    background-color: $rose800;
     font-weight: 500;
     padding: 12px;
     position: absolute;

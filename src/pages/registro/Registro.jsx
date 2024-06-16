@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import "../login/LoginPage.css";
+import "../login/LoginPage.scss";
 import ErrorAlert from "../../componentes/ErrorAlert";
 import { signup } from "../../api/signup";
 import { Link } from "react-router-dom";

@@ -1,0 +1,42 @@
+//variables
+
+$stone950: #0c0a09;
+$stone900: #1c1917;
+$stone500: #78716c;
+$stone400: #a8a29e;
+$stone300: #d6d3d1;
+$stone200: #e7e5e4;
+$stone50: #fafaf9;
+
+$stone50transparent: #fafaf930;
+$stone950light: #0d0b0b;
+
+$emerald600: #059669;
+$emerald500: #10b981;
+$emerald400: #34d399;
+$emerald300: #6ee7b7;
+$emerald200: #a7f3d0;
+$emerald100: #d1fae5;
+
+$rose800: #9f1239;
+$rose700: #be123c;
+$rose600: #e11d48;
+$rose500: #f43f5e;
+
+$border: 1px solid $stone50transparent;
+$border-radius: 4px;
+$border-radius-lg: 16px;
+
+//mixins
+
+@mixin flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin flex-between {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}

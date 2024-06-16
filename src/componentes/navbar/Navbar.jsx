@@ -1,4 +1,4 @@
-import "./Navbar.css";
+import "./Navbar.scss";
 import { NavLink, Link } from "react-router-dom";
 import Logo from "../../assets/logo.png";
 import {useUserContext} from "../../contexts/useUserContext";

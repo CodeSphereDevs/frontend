@@ -3,7 +3,7 @@ import { useState } from "react";
 import { useUserContext } from "../../contexts/useUserContext";
 import { useEffect } from "react";
 import { getUserByName } from "../../api/getUserByName";
-import "./Usuario.css";
+import "./Usuario.scss";
 import Info from "./Info";
 import Loader from "../../assets/loader.svg"
 import Links from "./Links";

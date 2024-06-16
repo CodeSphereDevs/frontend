@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { useUserContext } from "../../contexts/useUserContext";
 import { useNavigate } from "react-router-dom";
-import "./LoginPage.css";
+import "./LoginPage.scss";
 import ErrorAlert from "../../componentes/ErrorAlert";
 import { login } from "../../api/login";
 import { Link } from "react-router-dom";

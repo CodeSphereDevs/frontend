@@ -1,3 +1,5 @@
+@import "../../sass/_sassConfing";
+
 .pageIsLoading {
     display: flex;
     align-items: center;
@@ -27,18 +29,18 @@
 }
 
 .username {
-    color: #f4f4f5;
+    color: $stone50;
     font-size: x-large;
 }
 
 .title {
-    color: #d4d4d8;
+    color: $stone200;
     font-size: larger;
 }
 
 .details {
     white-space: pre-line;
-    color: #71717a;
+    color: $stone400;
     margin-top: 4vh;
     width: 80%;
 }
@@ -49,8 +51,8 @@
     right: 12px;
     background: none;
     border: none;
-    color: #34d399;
-    stroke: #34d399;
+    color: $emerald400;
+    stroke: $emerald400;
     cursor: pointer;
     display: flex;
     align-items: center;
@@ -63,8 +65,8 @@
 }
 
 .editButton:hover{
-    color: #7df3c4;
-    stroke: #7df3c4;
+    color: $emerald200;
+    stroke: $emerald200;
 }
 
 .avatar {
@@ -75,6 +77,6 @@
 .links {
     grid-area: links;
     min-width: 250px;
-    border: 1px solid gray;
+    border: 1px solid $stone400;
     padding: 16px;
 }

@@ -1,4 +1,4 @@
-import "./userCard.css"
+import "./userCard.scss"
 
 const UserCard = () => {
   return (

@@ -1,3 +1,5 @@
+@import "../../sass/_sassConfing.scss";
+
 .loginPage {
     display: flex;
     justify-content: center;
@@ -7,11 +9,16 @@
     gap: 6px;
 }
 
+.loginPage span{
+    color: $stone300;
+}
+
 form {
     display: flex;
     flex-direction: column;
     gap: 16px;
-    /* border: 1px solid #52525b; */
+    border: $border;
+    border-radius: $border-radius-lg;
     padding: 20px;
 }
 
@@ -22,15 +29,18 @@ form > div {
 
 label {
     font-size: 0.9rem;
-    color: #d4d4d4;
+    color: $stone400;
+    
 }
 
 input{
     padding: 8px;
-    background-color: #18181b;
+    background-color: $stone900;
     border: none;
-    color: #e2e8f0;
-    font-size: 1.1rem;
+    color: $stone400;
+    font-size: 0.8rem;
+    width: 240px;
+    border-radius: $border-radius;
 }
 
 input:focus{
@@ -39,26 +49,29 @@ input:focus{
 
 .submitButton {
     border: none;
-    background-color: #047857;
+    background-color: $emerald500;
     border-radius: 5px;
     padding: 8px ;
     cursor: pointer;
-    color: white;
+    color: $stone950;
     text-transform: uppercase;
 }
 
 .submitButton:hover{
-    background-color: #10b981;
+    background-color: $emerald600;
 }
 
 .createAccountButton {
     font-size: 0.9rem;
     border: none;
-    color: #34d399;
+    color: $emerald600;
+    text-decoration: underline transparent;
+    text-underline-offset: 2px;
 }
 
 .createAccountButton:hover{
-    color: #a7f3d0;
+    color: $emerald600;
+    text-decoration: underline;
 }
 
 span{
