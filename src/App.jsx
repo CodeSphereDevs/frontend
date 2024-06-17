@@ -8,6 +8,7 @@ import UserContext from "./contexts/useUserContext";
 import LoginPage from "./pages/login/LoginPage";
 import Registro from "./pages/registro/Registro";
 import Usuario from "./pages/usuario/Usuario";
+import { Proyectos } from "./pages/proyectos/proyectos";
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
           <main>
             <Routes>
               <Route path="/" element={<Home />} />
+              <Route path="/proyectos" element={<Proyectos/>}/>
               <Route path="/usuarios" element={<Usuarios />} />
               <Route path="/usuarios/:username" element={<Usuario />} />
               <Route path="/login" element={<LoginPage />} />

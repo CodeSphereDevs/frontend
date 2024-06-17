@@ -1,0 +1,71 @@
+@import "../../sass/sassConfing";
+
+.project_card_container{
+    border: $border;
+    border-radius: $border-radius-lg;
+    background-color: $stone950light;
+    display: flex;
+    flex-direction: column;
+    padding: 22px;
+    max-width: 500px;
+}
+
+.project_info{
+    display: flex;
+    flex-direction: column;
+
+    h1{
+        font-size: 22px;
+        font-weight: 400;
+        color: $stone50;
+    }
+}
+
+.leader_container{
+    display: flex;
+    gap: 5px;
+
+    .leader{
+        font-size: 16px;
+        font-weight: 300;
+    }   
+}
+
+.description{
+    font-size: 14px;
+    color: $stone400;
+    max-width: 400px;
+    margin-block: 10px;
+}
+
+.details_container{
+    display: flex;
+    justify-content: space-between;
+}
+
+.counter{ 
+    display: flex;
+    .members{
+        font-size: 14px;
+        font-weight: 400;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        }
+}
+
+.card_btn{
+    background-color: $stone950;
+    border: 1px solid $emerald400;
+    border-radius: $border-radius;
+    padding: 4px 8px;
+    color: $emerald400;
+    font-size: 14px;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+.card_btn:hover{
+border: 1px solid $emerald300;
+color: $emerald300;
+}
