@@ -49,7 +49,7 @@ export default function LoginPage() {
     }
 
     setUser(response.data);
-    nav(`/usuario/${username}`);
+    nav(`/usuarios/${username}`);
   };
 
   return (
