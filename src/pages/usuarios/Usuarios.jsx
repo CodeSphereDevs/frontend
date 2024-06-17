@@ -32,7 +32,7 @@ export default function Usuarios() {
       ) : (
         <>
           {users.map((user) => (
-            <UserCard user={user} />
+            <UserCard key={user.id} user={user} />
           ))}
 
         </>

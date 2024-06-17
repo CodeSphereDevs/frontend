@@ -1,27 +1,36 @@
 import { ProjectCard } from "../../componentes/projectCard/projectCard"
 import { useState, useEffect } from "react";
-import { getUsers } from "../../api/getUsers";
+import { getProjects } from "../../api/getProjects";
 import "./proyectos.scss";
 
 export const Proyectos = () => {
-    const [users, setUsers] = useState([]);
+    const [projects, setProjects] = useState([]);
+    const [loading, setLoading] = useState(false);
 
-  useEffect(() => {
-    (async () => {
-      const response = await getUsers();
-      if (response.success) {
-        setUsers(response.data);
-        // setIsLoading(false);
-      }
-    })();
-  }, []);
+    useEffect(() => {
+      (async () => {
+        setLoading(true);
+        const response = await getProjects();
+        if (response.success) {
+          setProjects(response.data);
+          setLoading(false);
+        }
+      })();
+    }, []);
   return (
     <div className="card_list">
-        <ProjectCard/>
-        <ProjectCard/>
-        <ProjectCard/>
-        <ProjectCard/>
-        <ProjectCard/>
+      {loading ? (
+        <>
+        </>
+      ) : (
+        <>
+          {projects.map((project) => (
+            <ProjectCard key={project.id} project={project} />
+          ))}
+
+        </>
+      )}
+
     </div>
   )
 }
