@@ -1,24 +1,42 @@
 import UserCard from "../../componentes/userCard/userCard";
 import { useState, useEffect } from "react";
 import { getUsers } from "../../api/getUsers";
-import "./Usuarios.scss"
+import "./Usuarios.scss";
+import UserCardSkeleton from "./UserCardSkeleton";
 
 export default function Usuarios() {
   const [users, setUsers] = useState([]);
+  const [loading, setLoading] = useState(false);
 
   useEffect(() => {
     (async () => {
+      setLoading(true);
       const response = await getUsers();
       if (response.success) {
         setUsers(response.data);
-        // setIsLoading(false);
+        setLoading(false);
       }
     })();
   }, []);
 
   return (
     <div className="users-list">
-      {users.map(user => <UserCard user={user}/>)}
+      {loading ? (
+        <>
+          <UserCardSkeleton />
+          <UserCardSkeleton />
+          <UserCardSkeleton />
+          <UserCardSkeleton />
+
+        </>
+      ) : (
+        <>
+          {users.map((user) => (
+            <UserCard user={user} />
+          ))}
+
+        </>
+      )}
     </div>
-  )
+  );
 }
