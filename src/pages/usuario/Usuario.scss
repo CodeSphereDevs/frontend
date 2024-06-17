@@ -1,82 +1,83 @@
 @import "../../sass/_sassConfing";
 
 .pageIsLoading {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    min-height: calc(100vh - 160px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: calc(100vh - 160px);
 }
 
 .userpage {
-    display: grid;
-    grid-template-areas: 
+  display: grid;
+  grid-template-areas:
     "info info links"
     "info info posts"
-    "i i p"
-    ;
-    gap: 16px;
-}
+    "i i p";
+  gap: 16px;
 
-.infoSection {
+  .infoSection {
     display: flex;
     flex-direction: column;
     gap: 8px;
     align-items: center;
-    /* border: 1px solid darkgray; */
-    padding: 20px;
+    border: 1px solid rgb(29, 29, 29); 
+    padding: 28px;
     position: relative;
     grid-area: info;
-}
+    border-radius: 16px;
 
-.username {
-    color: $stone50;
-    font-size: x-large;
-}
-
-.title {
-    color: $stone200;
-    font-size: larger;
-}
-
-.details {
-    white-space: pre-line;
-    color: $stone400;
-    margin-top: 4vh;
-    width: 80%;
-}
-
-.editButton{
-    position: absolute;
-    top: 12px;
-    right: 12px;
-    background: none;
-    border: none;
-    color: $emerald400;
-    stroke: $emerald400;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    gap: 4px;
+    .editButton {
+        position: absolute;
+        top: 12px;
+        right: 16px;
+        background: none;
+        border: none;
+        color: $emerald500;
+        stroke: $emerald500;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        gap: 4px;
     
-}
+        span {
+            font-size: 0.7rem;
+          }
+      }
 
-.editButton span{
-    font-size: 0.8rem;
-}
+      .username {
+        color: $stone50;
+        font-size: xx-large;
+      }
+    
+      .title {
+        color: $stone300;
+        font-size: larger;
+      }
+    
+      .details {
+        white-space: pre-line;
+        color: $stone400;
+        margin-top: 4vh;
+        width: 80%;
+      }
+    
+      .editButton:hover {
+        color: $emerald200;
+        stroke: $emerald200;
+      }
+    
+      .avatar {
+        border-radius: 50%;
+        height: 250px;
+      }
+  }
 
-.editButton:hover{
-    color: $emerald200;
-    stroke: $emerald200;
-}
+  
 
-.avatar {
-    border-radius: 50%;
-    height: 250px;
-}
-
-.links {
+  .links {
     grid-area: links;
     min-width: 250px;
-    border: 1px solid $stone400;
+    border: 1px solid rgb(59, 59, 59);
     padding: 16px;
+  }
 }

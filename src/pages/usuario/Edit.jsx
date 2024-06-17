@@ -1,7 +1,13 @@
-export default function Edit({ onClickFunction }) {
+import { updateUser } from "../../api/updateUser";
+
+export default function Edit() {
+  const handleClick = () => {
+    updateUser();
+  }
+
   return (
     <button
-      onClick={onClickFunction}
+      onClick={handleClick}
       className="editButton"
     >
       <svg

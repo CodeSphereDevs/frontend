@@ -40,7 +40,7 @@ export default function Usuario() {
         <Info user={user} isMine={userFromContext != null && user.username == userFromContext.username}/>
         <Links links={user.links}/>
       </div>
-      <div style={{whiteSpace:"pre-line", border:"1px solid gray", marginTop: "10vh", fontSize:"smaller", padding:"16px"}}>{JSON.stringify(user, null, 2)}</div>
+      <div style={{whiteSpace:"pre-line", border:"1px solid #222", marginTop: "10vh", fontSize:"smaller", padding:"16px"}}>{JSON.stringify(user, null, 2)}</div>
     </>
   );
 }
