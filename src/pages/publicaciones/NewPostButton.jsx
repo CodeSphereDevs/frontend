@@ -2,6 +2,6 @@ import { Link } from "react-router-dom";
 
 export default function NewPosttButton() {
   return (
-    <Link to={"/nuevo-proyecto"} className="createButton">Nueva publicación</Link>
+    <Link to={"/nueva-publicacion"} className="createButton">Nueva publicación</Link>
   )
 }

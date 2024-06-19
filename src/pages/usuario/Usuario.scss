@@ -103,17 +103,18 @@
     gap: 8px;
 
     .uploadAvatar {
-      background-color: $rose300;
+      background-color: $stone400;
       color: black;
       padding: 4px;
       border-radius: 4px;
       text-align: center;
       font-weight: 700;
       cursor: pointer;
+      font-size: 1.1rem;
     }
 
     .uploadAvatar:hover{
-      background-color: $rose200;
+      background-color: $emerald200;
     } 
 
     label{

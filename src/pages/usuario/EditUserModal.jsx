@@ -1,4 +1,4 @@
-export default function EditUserModal({ showEditUserModal }) {
+export default function EditUserModal({ user, showEditUserModal }) {
   return (
     <div className="editUserModal">
       <label htmlFor="avatar" className="uploadAvatar">
@@ -7,13 +7,14 @@ export default function EditUserModal({ showEditUserModal }) {
       </label>
 
       <label htmlFor="usertitle">Título:</label>
-      <input type="text" id="usertitle" />
+      <input type="text" id="usertitle" placeholder={ user.title == null ? "Agrega un título" : user.title}/>
 
       <label htmlFor="userdescription">Descripción:</label>
-      <textarea id="userdescription" rows={6}></textarea>
+      <textarea id="userdescription" rows={6} placeholder={ user.details == null ? "Agrega un título" : user.details}></textarea>
 
       <label htmlFor="techs">Tecnologías:</label>
-      
+      <input type="text" name="" id="techs" />
+      <div>{user.technologies.map(tech => <span></span>) }</div>
       
       <div>
         <button className="cancelButton" onClick={()=> showEditUserModal(false)}>Cancelar</button>

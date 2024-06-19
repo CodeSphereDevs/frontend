@@ -34,6 +34,8 @@
   }
 
   article:hover{
-    background: $stone900;
-  }
+    // background: $stone900;
+    border: 1px solid rgb(133, 133, 133);
+    transform: scale(1.02);
+    }
 }
