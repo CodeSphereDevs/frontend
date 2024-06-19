@@ -7,74 +7,56 @@
     flex-direction: column;
     min-height: calc(100vh - 122px);
     gap: 6px;
-}
 
-.loginPage span{
-    color: $stone300;
-}
+    span{
+        color: $stone300;
+        font-size: 0.9rem;
+    }
 
-form {
-    display: flex;
-    flex-direction: column;
-    gap: 16px;
-    border: $border;
-    border-radius: $border-radius-lg;
-    padding: 20px;
-}
-
-form > div {
-    display: flex;
-    flex-direction: column;
-}
-
-label {
-    font-size: 0.9rem;
-    color: $stone400;
+    form {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+        border: $border;
+        border-radius: $border-radius-lg;
+        padding: 20px;
+    }
+    
+    form > div {
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .submitButton {
+        border: none;
+        background-color: $emerald400;
+        border-radius: 5px;
+        padding: 8px ;
+        cursor: pointer;
+        color: $stone950;
+        text-transform: uppercase;
+        font-weight: 600;
+    }
+    
+    .submitButton:hover{
+        background-color: $emerald300;
+    }
+    
+    .createAccountButton {
+        font-size: 0.9rem;
+        border: none;
+        color: $emerald600;
+        text-decoration: underline transparent;
+        text-underline-offset: 2px;
+    }
+    
+    .createAccountButton:hover{
+        color: $emerald600;
+        text-decoration: underline;
+    }
+    
     
 }
 
-input{
-    padding: 8px;
-    background-color: $stone900;
-    border: none;
-    color: $stone400;
-    font-size: 0.8rem;
-    width: 240px;
-    border-radius: $border-radius;
-}
 
-input:focus{
-    outline: none;
-}
 
-.submitButton {
-    border: none;
-    background-color: $emerald400;
-    border-radius: 5px;
-    padding: 8px ;
-    cursor: pointer;
-    color: $stone950;
-    text-transform: uppercase;
-    font-weight: 600;
-}
-
-.submitButton:hover{
-    background-color: $emerald300;
-}
-
-.createAccountButton {
-    font-size: 0.9rem;
-    border: none;
-    color: $emerald600;
-    text-decoration: underline transparent;
-    text-underline-offset: 2px;
-}
-
-.createAccountButton:hover{
-    color: $emerald600;
-    text-decoration: underline;
-}
-
-span{
-    font-size: 0.9rem;
-}

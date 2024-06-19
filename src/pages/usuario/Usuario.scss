@@ -32,8 +32,8 @@
         right: 16px;
         background: none;
         border: none;
-        color: $emerald500;
-        stroke: $emerald500;
+        color: $emerald200;
+        stroke: $emerald200;
         cursor: pointer;
         display: flex;
         align-items: center;
@@ -62,8 +62,8 @@
       }
     
       .editButton:hover {
-        color: $emerald200;
-        stroke: $emerald200;
+        color: $emerald100;
+        stroke: $emerald100;
       }
     
       .avatar {
@@ -79,5 +79,75 @@
     min-width: 250px;
     border: 1px solid rgb(59, 59, 59);
     padding: 16px;
+  }
+}
+
+.backblur {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0);
+  backdrop-filter: blur(2px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .editUserModal {
+    background-color: $stone950;
+    padding: 20px;
+    border: 1px solid $stone800;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+
+    .uploadAvatar {
+      background-color: $rose300;
+      color: black;
+      padding: 4px;
+      border-radius: 4px;
+      text-align: center;
+      font-weight: 700;
+      cursor: pointer;
+    }
+
+    .uploadAvatar:hover{
+      background-color: $rose200;
+    } 
+
+    label{
+      margin-top: 10px;
+    }
+    textarea {
+      background-color: $stone900;
+      border: none;
+      resize: none;
+
+    }
+
+    div{
+      display: flex;
+      justify-content: space-between;
+      margin-top: 14px;
+      
+      .cancelButton {
+        background-color: $stone900;
+        color: $emerald500;
+      }
+
+      .cancelButton:hover{
+        background-color: $stone800;
+      }
+
+      .saveButton {
+        background-color: $emerald400;
+        font-weight: 700;
+      }
+
+      .saveButton:hover {
+        background-color: $emerald300;
+      }
+    }
   }
 }

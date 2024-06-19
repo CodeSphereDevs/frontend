@@ -1,10 +1,10 @@
 import NoAvatar from "../../assets/noavatar.svg";
 import Edit from "./Edit";
 
-export default function Info({user,isMine}) {
+export default function Info({user,isMine, showEditUserModal}) {
   return (
     <section className="infoSection">
-      {isMine && <Edit />}
+      {isMine && <Edit showEditUserModal={showEditUserModal}/>}
      {user.urlAvatar != null ? <img src={user.urlAvatar} className="avatar"/>: <img src={NoAvatar} alt="no avatar image" className="avatar"/>}
       <h1 className="username">{user.username}</h1>  
       <h2 className="title">{user.title != null ? user.title :  "sin título" }</h2>

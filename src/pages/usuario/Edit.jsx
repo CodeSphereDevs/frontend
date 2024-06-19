@@ -1,16 +1,13 @@
 import { updateUser } from "../../api/updateUser";
 
-export default function Edit() {
-  const handleClick = () => {
-    updateUser();
-  }
+export default function Edit({showEditUserModal}) {
 
   return (
     <button
-      onClick={handleClick}
+      onClick={()=>showEditUserModal(true)}
       className="editButton"
     >
-      <svg
+      {/* <svg
         width="18px"
         height="18px"
         viewBox="0 0 24 24"
@@ -36,7 +33,7 @@ export default function Edit() {
                 <path
                   d="M20,16v4a2,2,0,0,1-2,2H4a2,2,0,0,1-2-2V6A2,2,0,0,1,4,4H8"
                   fill="none"
-                  stroke="#22c55e"
+                  stroke="currentStroke"
                   stroke-linecap="round"
                   stroke-linejoin="round"
                   stroke-width="2"
@@ -54,7 +51,7 @@ export default function Edit() {
             </g>{" "}
           </g>{" "}
         </g>
-      </svg>
+      </svg> */}
       <span> Editar perfil</span>
     </button>
   );
