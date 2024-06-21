@@ -1,0 +1,41 @@
+@import "../../../sass/_sassConfing";
+
+.userCard {
+  text-decoration: none;
+
+  article {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 24px;
+    border: $border;
+    border-radius: 16px;
+    height: 280px;
+    background: $stone950;
+
+    .userCard_img {
+      border-radius: 100%;
+      width: 90%;
+    }
+
+    .userCard_name {
+      font-size: 1.3rem;
+      font-weight: 600;
+      color: $stone50;
+    }
+
+    .userCard_title {
+      text-transform: uppercase;
+      font-size: 0.8rem;
+      color: $stone400;
+      font-weight: 500;
+      text-align: center;
+    }
+  }
+
+  article:hover{
+    // background: $stone900;
+    border: 1px solid rgb(133, 133, 133);
+    transform: scale(1.02);
+    }
+}

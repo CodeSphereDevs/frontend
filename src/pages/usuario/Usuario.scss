@@ -1,0 +1,154 @@
+@import "../../sass/_sassConfing";
+
+.pageIsLoading {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: calc(100vh - 160px);
+}
+
+.userpage {
+  display: grid;
+  grid-template-areas:
+    "info info links"
+    "info info posts"
+    "i i p";
+  gap: 16px;
+
+  .infoSection {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    align-items: center;
+    border: 1px solid rgb(29, 29, 29); 
+    padding: 28px;
+    position: relative;
+    grid-area: info;
+    border-radius: 16px;
+
+    .editButton {
+        position: absolute;
+        top: 12px;
+        right: 16px;
+        background: none;
+        border: none;
+        color: $emerald200;
+        stroke: $emerald200;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        gap: 4px;
+    
+        span {
+            font-size: 0.7rem;
+          }
+      }
+
+      .username {
+        color: $stone50;
+        font-size: xx-large;
+      }
+    
+      .title {
+        color: $stone300;
+        font-size: larger;
+      }
+    
+      .details {
+        white-space: pre-line;
+        color: $stone400;
+        margin-top: 4vh;
+        width: 80%;
+      }
+    
+      .editButton:hover {
+        color: $emerald100;
+        stroke: $emerald100;
+      }
+    
+      .avatar {
+        border-radius: 50%;
+        height: 250px;
+      }
+  }
+
+  
+
+  .links {
+    grid-area: links;
+    min-width: 250px;
+    border: 1px solid rgb(59, 59, 59);
+    padding: 16px;
+  }
+}
+
+.backblur {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0);
+  backdrop-filter: blur(2px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .editUserModal {
+    background-color: $stone950;
+    padding: 20px;
+    border: 1px solid $stone800;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+
+    .uploadAvatar {
+      background-color: $stone400;
+      color: black;
+      padding: 4px;
+      border-radius: 4px;
+      text-align: center;
+      font-weight: 700;
+      cursor: pointer;
+      font-size: 1.1rem;
+    }
+
+    .uploadAvatar:hover{
+      background-color: $emerald200;
+    } 
+
+    label{
+      margin-top: 10px;
+    }
+    textarea {
+      background-color: $stone900;
+      border: none;
+      resize: none;
+
+    }
+
+    div{
+      display: flex;
+      justify-content: space-between;
+      margin-top: 14px;
+      
+      .cancelButton {
+        background-color: $stone900;
+        color: $emerald500;
+      }
+
+      .cancelButton:hover{
+        background-color: $stone800;
+      }
+
+      .saveButton {
+        background-color: $emerald400;
+        font-weight: 700;
+      }
+
+      .saveButton:hover {
+        background-color: $emerald300;
+      }
+    }
+  }
+}

@@ -1,0 +1,36 @@
+@import "../../sass/_sassConfing.scss";
+
+.userMenu {
+  position: absolute;
+  right: 5%;
+  top: 60px;
+  display: flex;
+  gap: 8px;
+  flex-direction: column;
+  border: 1px solid $stone900;
+  padding: 16px;
+
+ a, button {
+    font-size: 0.9rem;
+    background: none;
+    text-decoration: none;
+    border: none;
+    color: rgb(233, 233, 233);
+    display: inline-block;
+    padding: 0;
+    text-align: left;
+    cursor: pointer;
+  }
+
+  a:hover {
+    color: $stone400;
+  }
+
+   button {
+    color: $stone400;
+  }
+
+   button:hover {
+    color: $stone200;
+  }
+}

@@ -1,0 +1,62 @@
+@import "../../sass/_sassConfing.scss";
+
+.loginPage {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    min-height: calc(100vh - 122px);
+    gap: 6px;
+
+    span{
+        color: $stone300;
+        font-size: 0.9rem;
+    }
+
+    form {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+        border: $border;
+        border-radius: $border-radius-lg;
+        padding: 20px;
+    }
+    
+    form > div {
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .submitButton {
+        border: none;
+        background-color: $emerald400;
+        border-radius: 5px;
+        padding: 8px ;
+        cursor: pointer;
+        color: $stone950;
+        text-transform: uppercase;
+        font-weight: 600;
+    }
+    
+    .submitButton:hover{
+        background-color: $emerald300;
+    }
+    
+    .createAccountButton {
+        font-size: 0.9rem;
+        border: none;
+        color: $emerald600;
+        text-decoration: underline transparent;
+        text-underline-offset: 2px;
+    }
+    
+    .createAccountButton:hover{
+        color: $emerald600;
+        text-decoration: underline;
+    }
+    
+    
+}
+
+
+

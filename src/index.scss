@@ -1,0 +1,63 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap');
+@import "./sass/_sassConfing.scss";
+
+* {
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto Mono';
+    font-style: normal;
+    user-select: none;
+    transition: 0.2s ease;
+}
+
+html{
+    input:-webkit-autofill,
+    input:-webkit-autofill:hover,
+    input:-webkit-autofill:focus,
+    input:-webkit-autofill:active {
+    -webkit-text-fill-color: $stone400 !important;
+    transition: background-color 5000s ease-in-out 0s;
+    -webkit-box-shadow: 0 0 0px 1000px $stone900 inset !important;
+    }
+}
+
+body {
+    background-color: $stone950light;
+    color:$stone50;
+}
+
+main {
+    max-width: 1064px;
+    margin: auto;
+    padding: 16px;
+}
+
+input, textarea{
+    padding: 8px;
+    background-color: $stone900;
+    border: none;
+    color: $stone400;
+    font-size: 0.8rem;
+    width: 240px;
+    border-radius: $border-radius;
+}
+
+input:focus, textarea:focus{
+    outline: none;
+}
+
+label {
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: $stone400;
+    
+}
+
+button {
+    border:none;
+    padding: 6px 10px;
+    font-weight: 600;
+    border-radius: 4px;
+    cursor: pointer;
+  }

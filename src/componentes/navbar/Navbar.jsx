@@ -1,15 +1,48 @@
-import "./Navbar.css"
+import "./Navbar.scss";
+import { NavLink, Link } from "react-router-dom";
+import Logo from "../../assets/logo.png";
+import { useUserContext } from "../../contexts/useUserContext";
+import IngresarButon from "./IngresarButon";
+import { useState } from "react";
+import UserMenu from "./UserMenu";
 
 export default function Navbar() {
+  const { user } = useUserContext();
+  const [showUserMenu, setShowUserMenu] = useState(false);
+
   return (
-    <div className="nav">
+    <nav className="nav">
+      <Link className="logo-container" to="/">
+        <img src={Logo} alt="codeSphere logo" />
+        <span>CodeSphere</span>
+      </Link>
       <ul>
-        <li>Inicio</li>
-        <li>usuarios</li>
-        <li>Proyectos</li>
-        <li>Publicaciones</li>
-        <li>Ingresar</li>
+        <li>
+          <NavLink to={"/"}>Inicio</NavLink>
+        </li>
+        <li>
+          <NavLink to={"/usuarios"}>Usuarios</NavLink>
+        </li>
+        <li>
+          <NavLink to={"/proyectos"}>Proyectos</NavLink>
+        </li>
+        <li>
+          <NavLink to={"/publicaciones"}>Publicaciones</NavLink>
+        </li>
+        <li>
+          {user == null ? (
+            <IngresarButon />
+          ) : (
+            <button
+              className="userButton"
+              onClick={() => setShowUserMenu((value) => !value)}
+            >
+              {user.username}
+            </button>
+          )}
+        </li>
       </ul>
-    </div>
-  )
+      {user != null && showUserMenu && <UserMenu username={user.username} />}
+    </nav>
+  );
 }

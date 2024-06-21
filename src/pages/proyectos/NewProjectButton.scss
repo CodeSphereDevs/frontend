@@ -1,0 +1,18 @@
+@import "../../sass/sassConfing";
+
+.createButton {
+    align-self: flex-end;
+    padding: 2px 8px;
+    background-color: $emerald800;
+    border: none;
+    color: $emerald50;
+    font-weight: 600;
+    cursor: pointer;
+    text-transform: uppercase;
+    text-decoration: none;
+    border-radius: 6px;
+}
+
+.createButton:hover {
+    background-color: $emerald600;
+}
