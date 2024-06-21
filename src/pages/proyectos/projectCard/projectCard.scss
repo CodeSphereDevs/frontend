@@ -6,35 +6,39 @@
   background-color: $stone950light;
   display: flex;
   flex-direction: column;
-  padding: 22px;
+  padding: 24px;
   gap: 6px;
 
   h1 {
-    font-size: 1.3rem;
+    font-size: 1.2rem;
     font-weight: 700;
     color: $stone200;
     text-transform: uppercase;
   }
 
   .leader {
-    font-size: 1rem;
+    font-size: 0.9rem;
     font-weight: 500;
     color: $stone300;
   }
 
   .description {
-    font-size: 0.9rem;
+    font-size: 0.8rem;
     color: $stone400;
-    max-width: 400px;
-    margin-block: 10px;
+    margin: 8px 0;
+    white-space: pre-line;
+    display: -webkit-box;
+   -webkit-line-clamp: 2; /* number of lines to show */
+           line-clamp: 2; 
+   -webkit-box-orient: vertical;
   }
 
   .techs_container {
     display: flex;
-    gap: 8px;
-    
+    gap: 8x;
+    margin-top: 12px;
     .tech {
-        font-size: 0.8rem;
+        font-size: 0.7rem;
         color: $stone300;
         border: 1px solid $stone300;
         padding: 2px 6px;
@@ -55,20 +59,20 @@
     }
 
     .card_btn {
-      background-color: $stone950;
       border: 1px solid $emerald400;
       border-radius: $border-radius;
       padding: 4px 8px;
       color: $emerald400;
-      font-size: 14px;
+      font-size: .9rem;
       text-transform: uppercase;
       text-decoration: none;
       cursor: pointer;
+      font-weight: 600;
     }
 
     .card_btn:hover {
-      border: 1px solid $emerald300;
-      color: $emerald300;
+      background-color: $emerald300;
+      color: black;
     }
   }
 }
