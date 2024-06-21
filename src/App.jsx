@@ -8,9 +8,7 @@ import UserContext from "./contexts/useUserContext";
 import LoginPage from "./pages/login/LoginPage";
 import Registro from "./pages/registro/Registro";
 import Usuario from "./pages/usuario/Usuario";
-
-import Proyectos from "./pages/proyectos/proyectos"
-// import Proyectos from "./pages/proyectos/Proyectos";
+import Proyectos from "./pages/proyectos/Proyectos";
 import NuevoProyecto from "./pages/nuevo-proyecto/NuevoProyecto";
 import Publicaciones from "./pages/publicaciones/Publicaciones";
 import NuevaPublicacion from "./pages/nueva-publicacion/NuevaPublicacion";
