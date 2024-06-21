@@ -14,14 +14,14 @@ export default function EditUserModal({ user, showEditUserModal }) {
 
       <label htmlFor="techs">Tecnologías:</label>
       <input type="text" name="" id="techs" />
-      <div>{user.technologies.map(tech => <span></span>) }</div>
+      <div>{user.technologies.map(tech => <span>{tech}</span>) }</div>
       
       <div>
         <button className="cancelButton" onClick={()=> showEditUserModal(false)}>Cancelar</button>
         <button className="saveButton">Guardar cambios</button>
       </div>
 
-
+      
     </div>
   );
 }

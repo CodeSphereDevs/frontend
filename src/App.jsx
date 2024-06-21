@@ -12,6 +12,7 @@ import Proyectos from "./pages/proyectos/Proyectos";
 import NuevoProyecto from "./pages/nuevo-proyecto/NuevoProyecto";
 import Publicaciones from "./pages/publicaciones/Publicaciones";
 import NuevaPublicacion from "./pages/nueva-publicacion/NuevaPublicacion";
+import Proyecto from "./pages/proyecto/Proyecto";
 
 function App() {
   return (
@@ -22,12 +23,17 @@ function App() {
           <main>
             <Routes>
               <Route path="/" element={<Home />} />
+
               <Route path="/proyectos" element={<Proyectos/>}/>
+              <Route path="/proyecto/:projectName" element={<Proyecto />}/>
+              <Route path="/nuevo-proyecto" element={<NuevoProyecto />} />
+
               <Route path="/usuarios" element={<Usuarios />} />
-              <Route path="/usuarios/:username" element={<Usuario />} />
+              <Route path="/usuario/:username" element={<Usuario />} />
+
               <Route path="/login" element={<LoginPage />} />
               <Route path="/registro" element={<Registro />} />
-              <Route path="/nuevo-proyecto" element={<NuevoProyecto />} />
+              
               <Route path="/publicaciones" element={<Publicaciones />} />
               <Route path="/nueva-publicacion" element={<NuevaPublicacion />} />
             </Routes>

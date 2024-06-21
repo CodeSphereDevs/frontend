@@ -14,7 +14,7 @@ export default function UserMenu({username}) {
 
   return (
     <div className="userMenu">
-        <Link to={`/usuarios/${username}`} >Perfil</Link>
+        <Link to={`/usuario/${username}`} >Perfil</Link>
         <Link to={`/usuario/${username}`} >Mis Proyectos</Link>
         <Link to={`/usuario/${username}`} >Mis Publicaciones</Link>
         <button onClick={handleLogout} className="logoutButton">Salir</button>

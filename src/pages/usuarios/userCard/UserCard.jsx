@@ -1,10 +1,10 @@
 import "./userCard.scss";
 import { Link } from "react-router-dom";
-import NoAvatar from "../../assets/noavatar.svg";
+import NoAvatar from "../../../assets/noavatar.svg";
 
 const UserCard = ({ user }) => {
   return (
-    <Link to={`/usuarios/${user.username}`} className="userCard">
+    <Link to={`/usuario/${user.username}`} className="userCard">
       <article >
         {user.urlAvatar != null ? (
           <img src={user.urlAvatar} className="userCard_img" />

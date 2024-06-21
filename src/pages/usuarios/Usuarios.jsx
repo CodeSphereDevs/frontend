@@ -1,4 +1,4 @@
-import UserCard from "../../componentes/userCard/userCard";
+import UserCard from "./userCard/UserCard";
 import { useState, useEffect } from "react";
 import { getUsers } from "../../api/getUsers";
 import "./Usuarios.scss";

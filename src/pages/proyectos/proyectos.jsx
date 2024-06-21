@@ -1,4 +1,4 @@
-import { ProjectCard } from "../../componentes/projectCard/projectCard";
+import { ProjectCard } from "./projectCard/projectCard";
 import { useState, useEffect } from "react";
 import { getProjects } from "../../api/getProjects";
 import "./proyectos.scss";
@@ -18,6 +18,7 @@ export default function Proyectos() {
       }
     })();
   }, []);
+  
   return (
     <div className="card_list">
       <NewProjectButton />
