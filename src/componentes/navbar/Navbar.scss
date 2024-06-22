@@ -11,7 +11,7 @@
 
   ul {
     display: flex;
-    gap: 20px;
+    gap: 14px;
     list-style: none;
     align-items: center;
 
@@ -20,7 +20,7 @@
         color: $stone50;
         text-decoration: none;
         font-weight: 400;
-        font-size: 0.9rem;
+        font-size: 0.8rem;
       }
       a:hover {
         color: $stone400;
@@ -46,7 +46,7 @@
       background: none;
       border: none;
       color: $emerald500;
-      font-size: 1rem;
+      font-size: .9rem;
       cursor: pointer;
       font-weight: 600;
     }

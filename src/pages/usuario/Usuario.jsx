@@ -58,6 +58,7 @@ export default function Usuario() {
           marginTop: "10vh",
           fontSize: "smaller",
           padding: "16px",
+          color:"gray"
         }}
       >
         {JSON.stringify(user, null, 2)}

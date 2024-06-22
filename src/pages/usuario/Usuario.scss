@@ -18,7 +18,7 @@
   .infoSection {
     display: flex;
     flex-direction: column;
-    gap: 8px;
+    gap: 6px;
     align-items: center;
     border: 1px solid rgb(29, 29, 29); 
     padding: 28px;
@@ -46,12 +46,12 @@
 
       .username {
         color: $stone50;
-        font-size: xx-large;
+        font-size: 1.8rem;
       }
     
       .title {
         color: $stone300;
-        font-size: larger;
+        font-size: 1.3rem;
       }
     
       .details {
@@ -59,6 +59,7 @@
         color: $stone400;
         margin-top: 4vh;
         width: 80%;
+        font-size: .9rem;
       }
     
       .editButton:hover {
@@ -77,8 +78,9 @@
   .links {
     grid-area: links;
     min-width: 250px;
-    border: 1px solid rgb(59, 59, 59);
+    border: 1px solid rgb(43, 43, 43);
     padding: 16px;
+    font-size: .9rem;
   }
 }
 

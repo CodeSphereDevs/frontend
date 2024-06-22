@@ -5,20 +5,41 @@
     grid-template-areas: 
     "info info ml"
     "info info pm";
+    gap: 12px;
 
     .project_info {
         grid-area: info;
         display: flex;
         flex-direction: column;
         gap: 4vh;
+        font-size: .9rem;
+        padding: 12px;
 
+       header{
+        display: flex;
+        justify-content: space-between;
         h1 {
             text-transform: uppercase;
             color: $stone50;
+            font-size: 1.1rem;
         }
+        
+        .joinProjectBtn {
+            background-color: $stone800;
+            font-size: .8rem;
+            font-weight: 700;
+            color: $emerald400;
+        }
+
+        .joinProjectBtn:hover{
+            background-color: $stone200;
+            color: $emerald800;
+        }
+       }
 
         p {
             white-space: pre-line;
+            font-size: .8rem;
             color: $stone300;
         }
     }
@@ -30,6 +51,7 @@
         border: 1px solid $stone700;
         padding: 12px;
         border-radius: 12px;
+        font-size: .8rem;
 
         h3 {
             margin-bottom: 12px;
@@ -37,6 +59,30 @@
 
         .member {
             color: $stone300;
+            text-decoration: none;
+            display: flex;
+            align-items: start;
+            justify-content: space-between;
+            gap: 12px;
+            
+            svg{
+                stroke: $emerald300;
+            }
+
+            svg:hover{
+                stroke: $stone100;
+            }
+            
         }
+    }
+
+    .p_members_list {
+        grid-area: pm;
+        display: flex;
+        flex-direction: column;
+        border: 1px solid $rose300;
+        padding: 12px;
+        border-radius: 12px;
+        font-size: .8rem;
     }
 }
