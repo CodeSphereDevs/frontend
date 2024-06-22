@@ -1,4 +1,4 @@
-import { ProjectCard } from "./projectCard/projectCard";
+import { ProjectCard } from "./projectCard/ProjectCard";
 import { useState, useEffect } from "react";
 import { getProjects } from "../../api/getProjects";
 import "./proyectos.scss";

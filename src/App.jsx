@@ -4,6 +4,9 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 import Home from "./pages/inicio/Home";
 import Usuarios from "./pages/usuarios/Usuarios";
+
+
+
 import UserContext from "./contexts/useUserContext";
 import LoginPage from "./pages/login/LoginPage";
 import Registro from "./pages/registro/Registro";
@@ -13,6 +16,7 @@ import NuevoProyecto from "./pages/nuevo-proyecto/NuevoProyecto";
 import Publicaciones from "./pages/publicaciones/Publicaciones";
 import NuevaPublicacion from "./pages/nueva-publicacion/NuevaPublicacion";
 import Proyecto from "./pages/proyecto/Proyecto";
+
 
 function App() {
   return (
@@ -25,7 +29,7 @@ function App() {
               <Route path="/" element={<Home />} />
 
               <Route path="/proyectos" element={<Proyectos/>}/>
-              <Route path="/proyecto/:projectName" element={<Proyecto />}/>
+              <Route path="/proyecto/:projectName" element={<Proyecto/>}/>
               <Route path="/nuevo-proyecto" element={<NuevoProyecto />} />
 
               <Route path="/usuarios" element={<Usuarios />} />
