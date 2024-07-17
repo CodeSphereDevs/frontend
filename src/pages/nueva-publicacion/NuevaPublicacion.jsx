@@ -1,17 +1,12 @@
-
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import ErrorAlert from "../../componentes/ErrorAlert";
 import { login } from "../../api/login";
 import Loader from "../../assets/loader.svg";
 import { createPost } from "../../api/createPost";
-
-
-
-
+import "./NuevaPublicacion.scss";
 
 export default function NuevaPublicacion() {
-  
   const [errorAlert, setErrorAlert] = useState("");
   const [isLoading, setIsLoading] = useState(false);
   const nav = useNavigate();
@@ -30,7 +25,6 @@ export default function NuevaPublicacion() {
     const title = form.title.value;
     const content = form.content.value;
 
-
     setIsLoading(true);
     const response = await createPost(title, content);
     setIsLoading(false);
@@ -39,42 +33,34 @@ export default function NuevaPublicacion() {
       return;
     }
 
-    nav('/publicaciones')
+    nav("/publicaciones");
   };
 
   return (
     <div className="postPage">
-      <form onSubmit={handleSubmit} style={{ height: 230 }}>
+      <form onSubmit={handleSubmit}>
+        <h1>Nueva publicación</h1>
         {isLoading ? (
           <img src={Loader} alt="loader" />
         ) : (
           <>
             {" "}
-            <div>
-              <label htmlFor="title">Titulo:</label>
-              <input
-                type="text"
-                name="title"
-                id="title"
-                placeholder="titulo..."
-                autoComplete="off"
-              />
-            </div>
-            <div>
+
+              <label htmlFor="title">Título:</label>
+              <input type="text" name="title" id="title" autoComplete="off" />
+
+
               <label htmlFor="content">Contenido:</label>
-              <input
-                type="text"
-                name="content"
-                placeholder="..."
-              />
+              <textarea name="content" id="content" rows={12}></textarea>
+            <div>
+              <button>Cancelar</button>
+              <input type="submit" value="Publicar" className="submitButton" />
             </div>
-            <input type="submit" value="Publicar" className="submitButton" />
           </>
         )}
       </form>
-      
-      {errorAlert != "" && <ErrorAlert alertMessage={errorAlert} />}
 
+      {errorAlert != "" && <ErrorAlert alertMessage={errorAlert} />}
     </div>
-  );  
+  );
 }

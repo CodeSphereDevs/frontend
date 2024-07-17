@@ -16,6 +16,10 @@ export default function EditUserModal({ user, showEditUserModal }) {
       <input type="text" name="" id="techs" />
       <div>{user.technologies.map(tech => <span>{tech}</span>) }</div>
       
+      <label htmlFor="links">Enlaces:</label>
+      <input type="text" name="" id="links" />
+      <div>{user.links.map(link => <span>{link}</span>) }</div>
+
       <div>
         <button className="cancelButton" onClick={()=> showEditUserModal(false)}>Cancelar</button>
         <button className="saveButton">Guardar cambios</button>

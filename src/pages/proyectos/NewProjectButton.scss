@@ -3,16 +3,16 @@
 .createButton {
     align-self: flex-end;
     padding: 2px 8px;
-    background-color: $emerald800;
+    background-color: $stone800;
     border: none;
-    color: $emerald50;
-    font-weight: 600;
+    color: $emerald300;
+    font-weight: 400;
     cursor: pointer;
-    text-transform: uppercase;
     text-decoration: none;
     border-radius: 6px;
+    font-size: .9rem;
 }
 
 .createButton:hover {
-    background-color: $emerald600;
+    background-color: $stone700;
 }

@@ -20,11 +20,23 @@ html{
     transition: background-color 5000s ease-in-out 0s;
     -webkit-box-shadow: 0 0 0px 1000px $stone900 inset !important;
     }
+    scrollbar-gutter: stable;
+
+    ::-webkit-scrollbar{
+        width: 12px;
+        height: 12px;
+    }
+
+    ::-webkit-scrollbar-thumb {
+        background: $stone800;
+        border-radius: 5px;
+    }
 }
 
 body {
     background-color: $stone950light;
     color:$stone50;
+    
 }
 
 main {
@@ -39,7 +51,6 @@ input, textarea{
     border: none;
     color: $stone400;
     font-size: 0.8rem;
-    width: 240px;
     border-radius: $border-radius;
 }
 
