@@ -9,7 +9,7 @@ Crear el archivo .env con la variable que aparece en el archivo .env.example.
 Y usar el comando **pnpm dev** para ejectuar en local 
 
 ## Estructura
-Para contribuir es importante mantener la estructura interna del proyecto.
+~~~
  ├─ node_modules
  ├─ public
  ├─ .env
@@ -29,6 +29,7 @@ Para contribuir es importante mantener la estructura interna del proyecto.
      ├─ App.jsx
      ├─ index.scss
      └─ main.jsx
+~~~
 
 * En **pages** van los componentes que corresponden a las diferentes rutas y otros componentes que se usaran unicamente dentro de esa ruta.
 * En **components** van componentes que se usan en diferentes rutas
