@@ -1,5 +1,12 @@
-export default function Links({links}) {
+export default function Links({ links }) {
   return (
-    <div className="links">Links</div>
-  )
+    <div className="links">
+      <h3>Links</h3>
+      {links.map((link, index) => {
+        if (index % 2 == 0) {
+          return <a href={links[index+1]} target="_blank" rel="noopener noreferrer">{link}</a>;
+        }
+      })}
+    </div>
+  );
 }

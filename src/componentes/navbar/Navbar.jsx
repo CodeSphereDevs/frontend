@@ -1,6 +1,5 @@
 import "./Navbar.scss";
 import { NavLink, Link } from "react-router-dom";
-import Logo from "../../assets/logo.png";
 import { useUserContext } from "../../contexts/useUserContext";
 import IngresarButon from "./IngresarButon";
 import { useState } from "react";
@@ -13,7 +12,6 @@ export default function Navbar() {
   return (
     <nav className="nav">
       <Link className="logo-container" to="/">
-        <img src={Logo} alt="codeSphere logo" />
         <span>CodeSphere</span>
       </Link>
       <ul>

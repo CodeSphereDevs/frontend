@@ -9,6 +9,7 @@ export default function Info({user,isMine, showEditUserModal}) {
       <h1 className="username">{user.username}</h1>  
       <h2 className="title">{user.title != null ? user.title :  "sin título" }</h2>
       <p className="details">{user.details != null ? user.details : "No hay una descripción."}</p>
+      <div  className="techContainer">{user.technologies.map(tech => <span key={tech}>{tech}</span>)}</div>
     </section>
   )
 }

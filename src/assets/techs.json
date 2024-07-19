@@ -1,0 +1,203 @@
+[
+  {
+    "value": "JavaScript",
+    "label": "JavaScript"
+  },
+  {
+    "value": "Python",
+    "label": "Python"
+  },
+  {
+    "value": "Java",
+    "label": "Java"
+  },
+  {
+    "value": "C++",
+    "label": "C++"
+  },
+  {
+    "value": "Ruby",
+    "label": "Ruby"
+  },
+  {
+    "value": "PHP",
+    "label": "PHP"
+  },
+  {
+    "value": "Swift",
+    "label": "Swift"
+  },
+  {
+    "value": "Go",
+    "label": "Go"
+  },
+  {
+    "value": "Rust",
+    "label": "Rust"
+  },
+  {
+    "value": "Kotlin",
+    "label": "Kotlin"
+  },
+  {
+    "value": "TypeScript",
+    "label": "TypeScript"
+  },
+  {
+    "value": "Scala",
+    "label": "Scala"
+  },
+  {
+    "value": "Dart",
+    "label": "Dart"
+  },
+  {
+    "value": "C#",
+    "label": "C#"
+  },
+  {
+    "value": "HTML",
+    "label": "HTML"
+  },
+  {
+    "value": "CSS",
+    "label": "CSS"
+  },
+  {
+    "value": "SQL",
+    "label": "SQL"
+  },
+  {
+    "value": "R",
+    "label": "R"
+  },
+  {
+    "value": "Perl",
+    "label": "Perl"
+  },
+  {
+    "value": "Lua",
+    "label": "Lua"
+  },
+  {
+    "value": "MATLAB",
+    "label": "MATLAB"
+  },
+  {
+    "value": "Shell",
+    "label": "Shell"
+  },
+  {
+    "value": "Objective-C",
+    "label": "Objective-C"
+  },
+  {
+    "value": "VHDL",
+    "label": "VHDL"
+  },
+  {
+    "value": "Verilog",
+    "label": "Verilog"
+  },
+
+  {
+    "value": "React",
+    "label": "React"
+  },
+  {
+    "value": "Angular",
+    "label": "Angular"
+  },
+  {
+    "value": "Vue.js",
+    "label": "Vue.js"
+  },
+  {
+    "value": "Node.js",
+    "label": "Node.js"
+  },
+  {
+    "value": "Django",
+    "label": "Django"
+  },
+  {
+    "value": "Flask",
+    "label": "Flask"
+  },
+  {
+    "value": "Spring",
+    "label": "Spring"
+  },
+  {
+    "value": "Laravel",
+    "label": "Laravel"
+  },
+  {
+    "value": "Express",
+    "label": "Express"
+  },
+  {
+    "value": "Rails",
+    "label": "Rails"
+  },
+  {
+    "value": "ASP.NET",
+    "label": "ASP.NET"
+  },
+  {
+    "value": "Svelte",
+    "label": "Svelte"
+  },
+  {
+    "value": "Ember.js",
+    "label": "Ember.js"
+  },
+  {
+    "value": "Backbone.js",
+    "label": "Backbone.js"
+  },
+  {
+    "value": "Bootstrap",
+    "label": "Bootstrap"
+  },
+  {
+    "value": "Tailwind CSS",
+    "label": "Tailwind CSS"
+  },
+  {
+    "value": "jQuery",
+    "label": "jQuery"
+  },
+  {
+    "value": "Lodash",
+    "label": "Lodash"
+  },
+  {
+    "value": "Axios",
+    "label": "Axios"
+  },
+  {
+    "value": "Redux",
+    "label": "Redux"
+  },
+  {
+    "value": "MobX",
+    "label": "MobX"
+  },
+  {
+    "value": "GraphQL",
+    "label": "GraphQL"
+  },
+  {
+    "value": "Apollo",
+    "label": "Apollo"
+  },
+  {
+    "value": "TensorFlow",
+    "label": "TensorFlow"
+  },
+  {
+    "value": "PyTorch",
+    "label": "PyTorch"
+  }
+]

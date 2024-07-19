@@ -52,6 +52,7 @@
         padding: 12px;
         border-radius: 12px;
         font-size: .8rem;
+        color: $stone200;
 
         h3 {
             margin-bottom: 12px;
@@ -80,9 +81,10 @@
         grid-area: pm;
         display: flex;
         flex-direction: column;
-        border: 1px solid $rose300;
+        border: 1px solid $rose800;
         padding: 12px;
         border-radius: 12px;
         font-size: .8rem;
+        color: $stone200;
     }
 }

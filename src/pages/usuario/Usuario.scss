@@ -20,67 +20,93 @@
     flex-direction: column;
     gap: 6px;
     align-items: center;
-    border: 1px solid rgb(29, 29, 29); 
+    border: 1px solid rgb(29, 29, 29);
     padding: 28px;
     position: relative;
     grid-area: info;
     border-radius: 16px;
 
     .editButton {
-        position: absolute;
-        top: 12px;
-        right: 12px;
-        background: none;
-        border: none;
-        color: $emerald200;
-        stroke: $emerald200;
-        cursor: pointer;
-        display: flex;
-        align-items: center;
-        gap: 4px;
-        background-color: $stone900;
-        border-radius: 50%;
-        aspect-ratio: 1/1;
-      }
+      position: absolute;
+      top: 12px;
+      right: 12px;
+      background: none;
+      border: none;
+      color: $emerald200;
+      stroke: $emerald200;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 4px;
+      background-color: $stone900;
+      border-radius: 50%;
+      aspect-ratio: 1/1;
+    }
 
-      .username {
-        color: $stone50;
-        font-size: 1.8rem;
-      }
-    
-      .title {
+    .username {
+      color: $stone50;
+      font-size: 1.6rem;
+    }
+
+    .title {
+      color: $stone300;
+      font-size: 1.2rem;
+    }
+
+    .details {
+      white-space: pre-line;
+      color: $stone400;
+      margin-top: 2vh;
+      width: 80%;
+      font-size: 0.8rem;
+    }
+
+    .editButton:hover {
+      color: $emerald100;
+      stroke: $emerald100;
+      background-color: $stone800;
+    }
+
+    .avatar {
+      border-radius: 50%;
+      height: 250px;
+      aspect-ratio: 1/1;
+      object-fit: cover;
+      border: 2px solid $stone500;
+    }
+
+    .techContainer {
+      display: flex;
+      gap: 8px;
+      span {
+        font-size: 0.7rem;
+        border: 1px solid $stone300;
         color: $stone300;
-        font-size: 1.3rem;
+        padding: 2px 6px;
+        border-radius: 8px;
       }
-    
-      .details {
-        white-space: pre-line;
-        color: $stone400;
-        margin-top: 4vh;
-        width: 80%;
-        font-size: .9rem;
-      }
-    
-      .editButton:hover {
-        color: $emerald100;
-        stroke: $emerald100;
-        background-color: $stone800;
-      }
-    
-      .avatar {
-        border-radius: 50%;
-        height: 250px;
-      }
+    }
   }
-
-  
 
   .links {
     grid-area: links;
     min-width: 250px;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
     border: 1px solid rgb(43, 43, 43);
     padding: 16px;
-    font-size: .9rem;
+    font-size: 0.9rem;
+
+    a {
+      color: $emerald500;
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    a:hover {
+      color: $emerald300;
+    }
   }
 }
 
@@ -103,6 +129,7 @@
     display: flex;
     flex-direction: column;
     gap: 8px;
+    min-width: 30%;
 
     .uploadAvatar {
       border: 1px solid $stone500;
@@ -111,14 +138,14 @@
       text-align: center;
       font-weight: 400;
       cursor: pointer;
-      font-size: .9rem;
+      font-size: 0.9rem;
     }
 
-    .uploadAvatar:hover{
+    .uploadAvatar:hover {
       background-color: $stone800;
-    } 
+    }
 
-    label{
+    label {
       margin-top: 10px;
     }
 
@@ -128,18 +155,74 @@
       resize: none;
     }
 
-    div{
+    .techs div {
+      background-color: $stone900;
+      color: $stone300;
+      border: none;
+      font-size: 0.7rem;
+    }
+    .techs div:focus {
+      outline: none;
+    }
+
+    .linksSect {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+      margin-top: 6px;
+
+      button {
+        text-decoration: underline;
+        background: none;
+        color: $stone200;
+        font-size: 0.7rem;
+        padding: 0;
+      }
+    }
+
+    .newLink {
+      padding: 2px;
+      display: flex;
+      gap: 4px;
+      input {
+        padding: 4px;
+        flex-grow: 1;
+      }
+    }
+
+    .linkAtEdit {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 0.7rem;
+      color: $stone300;
+      position: relative;
+      padding: 4px 14px 4px 0;
+
+      button {
+        background: none;
+        color: $rose500;
+        position: absolute;
+        right: -8px;
+      }
+
+      button:hover {
+        color: $rose300;
+      }
+    }
+
+    .buttonsContainer {
       display: flex;
       justify-content: space-between;
       margin-top: 14px;
       gap: 8px;
-      
+
       .cancelButton {
         background-color: $stone900;
         color: $stone500;
       }
 
-      .cancelButton:hover{
+      .cancelButton:hover {
         background-color: $stone800;
       }
 
