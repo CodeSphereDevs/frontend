@@ -20,11 +20,11 @@
     flex-direction: column;
     gap: 6px;
     align-items: center;
-    border: 1px solid rgb(29, 29, 29);
+    // border-right: 1px solid rgb(29, 29, 29);
     padding: 28px;
     position: relative;
     grid-area: info;
-    border-radius: 16px;
+    // border-radius: 16px;
 
     .editButton {
       position: absolute;
@@ -44,7 +44,7 @@
     }
 
     .username {
-      color: $stone50;
+      color: $stone100;
       font-size: 1.6rem;
     }
 
@@ -56,9 +56,10 @@
     .details {
       white-space: pre-line;
       color: $stone400;
-      margin-top: 2vh;
+      margin-top: 1vh;
       width: 80%;
       font-size: 0.8rem;
+      text-align: center;
     }
 
     .editButton:hover {
@@ -72,12 +73,13 @@
       height: 250px;
       aspect-ratio: 1/1;
       object-fit: cover;
-      border: 2px solid $stone500;
+      // border: 2px solid $stone500;
     }
 
     .techContainer {
       display: flex;
       gap: 8px;
+      margin-top: 12px;
       span {
         font-size: 0.7rem;
         border: 1px solid $stone300;
@@ -90,13 +92,14 @@
 
   .links {
     grid-area: links;
-    min-width: 250px;
+    // min-width: 250px;
     display: flex;
     flex-direction: column;
     gap: 4px;
     border: 1px solid rgb(43, 43, 43);
     padding: 16px;
     font-size: 0.9rem;
+    border-radius: 12px;
 
     a {
       color: $emerald500;
@@ -106,6 +109,22 @@
 
     a:hover {
       color: $emerald300;
+    }
+  }
+
+  .posts {
+    grid-area: posts;
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    border: 1px solid rgb(43, 43, 43);
+    padding: 16px;
+    font-size: 0.9rem;
+
+    span{
+      font-size: .8rem;
+      color: $stone400;
     }
   }
 }

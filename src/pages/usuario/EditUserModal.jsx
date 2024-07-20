@@ -3,7 +3,6 @@ import Select from "react-select";
 import techsOptions from "../../assets/techs.json";
 import LinksAtEdit from "./LinksAtEdit";
 import { updateUser } from "../../api/updateUser";
-import { useNavigate } from "react-router-dom";
 
 export default function EditUserModal({ user,setUser, showEditUserModal }) {
   const [isLoading, setIsLoading] = useState(false);
@@ -15,8 +14,6 @@ export default function EditUserModal({ user,setUser, showEditUserModal }) {
 
   const [newLinkText, setNewLinkText] = useState("");
   const [newLink, setNewLink] = useState("");
-
-  const nav = useNavigate();
 
   const setTechnologies = (t) => {
     const tchs = t.map((tch) => tch.value);

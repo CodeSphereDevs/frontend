@@ -8,6 +8,7 @@ import Info from "./Info";
 import Loader from "../../assets/loader.svg";
 import Links from "./Links";
 import EditUserModal from "./EditUserModal";
+import Posts from "./Posts";
 
 export default function Usuario() {
   const [user, setUser] = useState();
@@ -45,6 +46,7 @@ export default function Usuario() {
           showEditUserModal={setShowEditUserModal}
         />
         <Links links={user.links} />
+        <Posts posts={user.posts}/>
       </div>
       {showEditUserModal && (
         <div className="backblur">
