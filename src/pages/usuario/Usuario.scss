@@ -181,12 +181,20 @@
     }
 
     .newLink {
-      padding: 2px;
       display: flex;
-      gap: 4px;
+      gap: 6px;
       input {
         padding: 4px;
         flex-grow: 1;
+      }
+      button{
+        background: none;
+        color: $emerald400;
+        font-size: 1.4rem;
+        padding: 0;
+      }
+      button:hover{
+        color: $emerald200;
       }
     }
 

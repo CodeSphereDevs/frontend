@@ -1,6 +1,6 @@
-const UPDATE_USER_ENDPOINT = `${import.meta.env.VITE_SERVER_URI}/api/users/update`;
+const UPDATE_USER_ENDPOINT = `${import.meta.env.VITE_SERVER_URI}/api/users/`;
 
-export const updateUser = async () => {
+export const updateUser = async (data) => {
     try{
         const response = await fetch(UPDATE_USER_ENDPOINT, {
             method: "PATCH",
@@ -8,7 +8,7 @@ export const updateUser = async () => {
                 "Content-Type":"application/json",
             },
             credentials:"include",
-            body: JSON.stringify()
+            body: JSON.stringify(data)
         })
         return await response.json();
     }catch(error){

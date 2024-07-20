@@ -48,7 +48,7 @@ export default function Usuario() {
       </div>
       {showEditUserModal && (
         <div className="backblur">
-          <EditUserModal showEditUserModal={setShowEditUserModal} user={user} />
+          <EditUserModal showEditUserModal={setShowEditUserModal} user={user} setUser={setUser} />
         </div>
       )}
       <div
