@@ -9,7 +9,7 @@
     align-items: center;
     padding: 24px;
     border: $border;
-    border-radius: 16px;
+    border-radius: 12px;
     height: 280px;
     background: $stone950;
 
@@ -36,8 +36,7 @@
   }
 
   article:hover{
-    // background: $stone900;
-    border: 1px solid rgb(133, 133, 133);
-    transform: scale(1.02);
+    border: 1px solid $stone500;
+    // background-color: $stone900;
     }
 }

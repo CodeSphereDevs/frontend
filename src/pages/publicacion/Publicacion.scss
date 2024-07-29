@@ -1,0 +1,71 @@
+@import "../../sass/sassConfing";
+
+.post {
+    padding: 36px 4px;
+    white-space: pre-line;
+    position: relative;
+    
+    h1{
+        color: $stone100;
+        font-size: 1.4rem;
+        font-weight: bold;
+    }
+
+    h2{
+        font-size: 1.3rem;
+        margin: 4px 0;
+    }
+
+    .author {
+        color: $stone300;
+        font-weight: 500;
+        margin-bottom: 16px;
+        display: inline-block;
+        font-size: 1.2rem;
+    }
+
+    .date {
+        position: absolute;
+        top: 24px;
+        right: 4px;
+        font-size: .7rem;
+        color: $stone500;
+    }
+
+    .likes-container {
+        position: absolute;
+        right: 4px;
+        bottom: 12px;
+        color: $stone400;
+        display: flex;
+        align-items: center;
+        padding: 4px;
+        gap: 8px;
+        background: none;
+    }
+
+    .likes-container:hover{
+        color: $stone100;
+
+    }
+
+    p{
+        color: $stone400;
+        font-size: .9rem;
+        margin: 4px 0;
+    }
+
+    a{
+        color: $emerald300;
+        text-decoration: none;
+    }
+
+    img{
+        max-width: 100%;
+        margin: 4px 0;
+    }
+
+    a:visited{
+        color: $emerald300;
+    }
+}
