@@ -1,40 +1,74 @@
 import { useState, useCallback } from "react";
 import { useNavigate } from "react-router-dom";
+import Select from "react-select";
 import ErrorAlert from "../../componentes/ErrorAlert";
 import Loader from "../../assets/loader.svg";
 import { createProject } from "../../api/createProject";
 import "./NuevoProyecto.scss";
+
+const initialTechs = [];
+const techsOptions = [
+  { value: "React", label: "React" },
+  { value: "Node.js", label: "Node.js" },
+  { value: "Python", label: "Python" },
+  { value: "Java", label: "Java" },
+];
 
 export default function NuevoProyecto() {
   const [errorAlert, setErrorAlert] = useState("");
   const [isLoading, setIsLoading] = useState(false);
   const nav = useNavigate();
 
-  const showErrorAlert = useCallback((s) => {
-    setErrorAlert(s);
-    const timeoutId = setTimeout(() => {
-      setErrorAlert("");
-    }, 3000);
-    return () => clearTimeout(timeoutId);
-  }, [setErrorAlert]);
+  const [formData, setFormData] = useState({
+    projectName: "",
+    details: "",
+    technologies: initialTechs,
+    numMembers: 2,
+  });
+
+  const handleInputChange = (e) => {
+    const { name, value } = e.target;
+    setFormData({
+      ...formData,
+      [name]: value,
+    });
+  };
+
+  const handleSelectChange = (selectedOptions) => {
+    setFormData({
+      ...formData,
+      technologies: selectedOptions,
+    });
+  };
+
+  const showErrorAlert = useCallback(
+    (message) => {
+      setErrorAlert(message);
+      const timeoutId = setTimeout(() => {
+        setErrorAlert("");
+      }, 3000);
+      return () => clearTimeout(timeoutId);
+    },
+    [setErrorAlert]
+  );
 
   const handleSubmit = async (event) => {
     event.preventDefault();
 
-    const form = event.currentTarget;
-    const projectName = form.projectName.value;
-    const details = form.details.value;
-    const technologies = form.technologies.value;
-    const numMembers = form.numMembers.value;
+    // Validación de campos
+    if (!formData.projectName || !formData.details || formData.technologies.length === 0) {
+      showErrorAlert("Todos los campos son obligatorios.");
+      return;
+    }
 
     setIsLoading(true);
-    
-    const response = await createProject(projectName, details, technologies, numMembers);
+
+    const response = await createProject(formData);
 
     setIsLoading(false);
 
-    if (!response.success) {
-      showErrorAlert(response.message);
+    if (response.error) {
+      showErrorAlert(response.error);
       return;
     }
 
@@ -50,26 +84,45 @@ export default function NuevoProyecto() {
         ) : (
           <>
             <label htmlFor="projectName">Nombre del Proyecto:</label>
-            <input type="text" name="projectName" id="projectName" autoComplete="off" />
-
+            <input
+              type="text"
+              name="projectName"
+              id="projectName"
+              autoComplete="off"
+              value={formData.projectName}
+              onChange={handleInputChange}
+            />
             <label htmlFor="details">Detalles:</label>
-            <textarea name="details" id="details" rows={6}></textarea>
-
+            <textarea
+              name="details"
+              id="details"
+              value={formData.details}
+              onChange={handleInputChange}
+            />
             <label htmlFor="technologies">Tecnologías:</label>
-            <input type="text" name="technologies" id="technologies" autoComplete="off" />
-
+            <Select
+              isMulti
+              name="technologies"
+              options={techsOptions}
+              className="techs"
+              value={formData.technologies}
+              onChange={handleSelectChange}
+            />
             <label htmlFor="numMembers">Número de Miembros:</label>
-            <input type="number" name="numMembers" id="numMembers" autoComplete="off" />
-
-            <div>
-              <button type="button" onClick={() => nav("/publicaciones")}>Cancelar</button>
-              <input type="submit" value="Publicar" className="submitButton" />
-            </div>
+            <input
+              type="number"
+              name="numMembers"
+              id="numMembers"
+              value={formData.numMembers}
+              onChange={handleInputChange}
+              min="2"
+              max="6"
+            />
+            <button type="submit">Crear Proyecto</button>
           </>
         )}
+        {errorAlert && <ErrorAlert message={errorAlert} />}
       </form>
-
-      {errorAlert && <ErrorAlert alertMessage={errorAlert} />}
     </div>
   );
 }

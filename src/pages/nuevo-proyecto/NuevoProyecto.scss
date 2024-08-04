@@ -24,6 +24,15 @@
     textarea {
       resize: none;
     }
+    .techs div {
+      background-color: $stone900;
+      color: $stone300;
+      border: none;
+      font-size: 0.7rem;
+    }
+    .techs div:focus {
+      outline: none;
+    }
 
     div {
       display: flex;
@@ -44,7 +53,6 @@
         font-weight: bold;
         cursor: pointer;
       }
-
       input[type="submit"]:hover {
         background-color: $emerald400;
       }
