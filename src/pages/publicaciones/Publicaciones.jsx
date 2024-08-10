@@ -1,27 +1,37 @@
-import { useState } from "react"
-import NewPosttButton from "./NewPostButton"
-import { useEffect } from "react";
+import { useState, useEffect } from "react";
+import NewPostButton from "./NewPostButton";
 import { getPosts } from "../../api/getPosts";
+import { PostCard } from "./postCard/PostCard";
 
 export default function Publicaciones() {
   const [posts, setPosts] = useState([]);
-  const [loading, setLoading] = useState(false);
+  const [loading, setLoading] = useState(true);
 
-  useEffect(()=>{
-    (async ()=> {
-      setLoading(true);
-      const response = await getPosts();
-      if(response.success){
-        setPosts(response.data);
+  useEffect(() => {
+    const fetchPosts = async () => {
+      try {
+        const response = await getPosts();
+        if (response.success) {
+          setPosts(response.data);
+        }
+      } catch (error) {
+        console.error("Error fetching posts:", error);
+      } finally {
         setLoading(false);
       }
-    })();
-  },[]);
+    };
+
+    fetchPosts();
+  }, []);
 
   return (
     <div className="card_list">
-        <NewPosttButton />
-      {posts.map(post => (<span>{JSON.stringify(post)}</span>))}
-  </div>
-  )
+      <NewPostButton />
+      {loading ? (
+        <p>Loading...</p>
+      ) : (
+        posts.map((post) => <PostCard key={post.id} post={post} />)
+      )}
+    </div>
+  );
 }
