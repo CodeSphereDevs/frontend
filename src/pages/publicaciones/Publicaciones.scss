@@ -1,0 +1,34 @@
+@import "../../sass/sassConfing";
+
+.post-card{
+    border: 1px solid $stone700;
+    border-radius: 12px;
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    text-decoration: none;
+    color: $stone100;
+    gap: 6px;
+
+    .author{
+        color: $stone300;
+    }
+
+    .date {
+        color: $stone400;
+        font-size: .8rem;
+    }
+
+    .likes {
+        align-self: flex-end;
+        display: flex;
+        align-items: center;
+        gap: 6px;
+        color: $stone300;
+    }
+}
+
+.post-card:hover{
+    border: 1px solid $stone500;
+    // background-color: $stone900;
+}

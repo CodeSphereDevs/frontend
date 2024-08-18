@@ -117,14 +117,19 @@
     border-radius: 12px;
     display: flex;
     flex-direction: column;
-    gap: 4px;
+    gap: 6px;
     border: 1px solid rgb(43, 43, 43);
     padding: 16px;
     font-size: 0.9rem;
 
-    span{
+    a{
       font-size: .8rem;
       color: $stone400;
+      text-decoration: none;
+    }
+
+    a:hover{
+      color: $stone200;
     }
   }
 }

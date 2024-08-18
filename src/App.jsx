@@ -11,6 +11,7 @@ import Usuario from "./pages/usuario/Usuario";
 import Proyectos from "./pages/proyectos/Proyectos";
 import NuevoProyecto from "./pages/nuevo-proyecto/NuevoProyecto";
 import Publicaciones from "./pages/publicaciones/Publicaciones";
+import Publicacion from "./pages/publicacion/Publicacion";
 import NuevaPublicacion from "./pages/nueva-publicacion/NuevaPublicacion";
 import Proyecto from "./pages/proyecto/Proyecto";
 
@@ -35,6 +36,7 @@ function App() {
               <Route path="/registro" element={<Registro />} />
               
               <Route path="/publicaciones" element={<Publicaciones />} />
+              <Route path="/publicacion/:title" element={<Publicacion />} />
               <Route path="/nueva-publicacion" element={<NuevaPublicacion />} />
             </Routes>
           </main>
